@@ -1,9 +1,8 @@
-FROM registry.access.redhat.com/ubi8/ubi-minimal
+FROM registry.access.redhat.com/ubi8/ubi
 
 USER root
 
-RUN HOME=/root && \
-microdnf update -y && microdnf -y clean all --enablerepo='*' && \
-rpm -e --nodeps $(rpm -qa '*rpm*' '*dnf*' '*libsolv*' '*hawkey*' 'yum*')
+RUN dnf update -y && dnf -y clean all --enablerepo='*' && \
+#rpm -e --nodeps $(rpm -qa '*rpm*' '*dnf*' '*libsolv*' '*hawkey*' 'yum*' 'curl')
 
 USER 1001
