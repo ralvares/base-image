@@ -3,6 +3,6 @@ FROM registry.access.redhat.com/ubi8/ubi-minimal
 USER root
 
 RUN microdnf update -y && microdnf -y clean all --enablerepo='*' && \
-rpm -e --nodeps $(rpm -qa '*rpm*' '*dnf*' '*libsolv*' '*hawkey*' 'yum*' 'curl')
+rpm -e --nodeps $(rpm -qa '*rpm*' '*dnf*' '*libsolv*' '*hawkey*' 'yum*')
 
 USER 1001
