@@ -1,7 +1,0 @@
-FROM scratch 
-
-MAINTAINER Rodrigo Alvares  <ralvares@redhat.com>
-
-COPY  vulapp.jar /
-
-USER 1001
