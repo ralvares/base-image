@@ -1,4 +1,4 @@
-FROM quay.io/ralvares/ubi8:ubi8-minimal
+FROM registry.access.redhat.com/ubi8/ubi-minimal
 
 MAINTAINER Rodrigo Alvares  <ralvares@redhat.com>
 USER root 
