@@ -105,7 +105,7 @@ jobs:
 workflows:
   say-hello-workflow:
     jobs:
-      - say-hello
+      - say-hello:
           name: hello
       - rox-orb/rox-image-scan: 
           context: rox
