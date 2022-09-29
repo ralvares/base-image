@@ -106,25 +106,26 @@ workflows:
   say-hello-workflow:
     jobs:
       - say-hello
+        name: hello
       - rox-orb/rox-image-scan: 
           context: rox
           name: scan an image
           rox_central_endpoint: $ROX_CENTRAL_ENDPOINT
           rox_api_token: $ROX_API_TOKEN
           rox_image: neilcar/jenkins-demo:latest
-          requires: [say-hello]
+          requires: [hello]
       - rox-orb/rox-image-check: 
           context: rox
           name: check an image against build-time policies
           rox_central_endpoint: $ROX_CENTRAL_ENDPOINT
           rox_api_token: $ROX_API_TOKEN
           rox_image: neilcar/jenkins-demo:latest
-          requires: [rox-orb/rox-image-scan]
+          requires: [scan an image]
       - rox-orb/rox-deployment-check: 
           context: rox
           name: Check deployment
           rox_central_endpoint: $ROX_CENTRAL_ENDPOINT
           rox_api_token: $ROX_API_TOKEN
           rox_deployment: deploy.yml
-          requires: [rox-orb/rox-image-check]
+          requires: [check an image against build-time policies]
           
