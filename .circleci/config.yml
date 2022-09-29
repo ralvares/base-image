@@ -106,9 +106,6 @@ workflows:
   say-hello-workflow:
     jobs:
       - say-hello
-  scanimage:
-    when: always
-    jobs:
       - rox-orb/rox-image-scan: 
           context: rox
           name: scan an image
