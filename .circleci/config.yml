@@ -18,7 +18,7 @@ jobs:
           version: 20.10.14
       - run:
           name: "Build-Image"
-          command: "docker build -t test ."
+          command: "echo $LOGIN $PASSWORD $ROXURL $ROXAPI $COSIGNKEY $COSIGNPUB"
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
