@@ -126,6 +126,6 @@ workflows:
           name: Check deployment
           rox_central_endpoint: $ROX_CENTRAL_ENDPOINT
           rox_api_token: $ROX_API_TOKEN
-          rox_deployment: deploy.yml
+          rox_deployment: deployment.yml
           requires: [check an image against build-time policies]
           
