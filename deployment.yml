@@ -5,6 +5,8 @@ metadata:
   labels:
     app: prod-app
 spec:
+  #serviceAccountName: visa-processor
+  automountServiceAccountToken: false
   containers:
   - name: app-container
     image: quay.io/rhacs-demo/sample-image:getting-started
