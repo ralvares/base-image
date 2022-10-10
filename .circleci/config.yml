@@ -105,7 +105,7 @@ jobs:
 workflows:
   build-image:
     jobs:
-      - build:
+      - build-image:
           name: build
       - rox-orb/rox-image-scan: 
           context: rox
