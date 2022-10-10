@@ -61,7 +61,7 @@ orbs:
           output_format:
             description: Format of image scan output (table | csv | json | junit) (default "table")
             type: string
-            default: "junit"
+            default: "table"
         steps:
           - rox-roxctl-install:
               rox_api_token: <<parameters.rox_api_token>>
