@@ -1,6 +1,7 @@
 apiVersion: v1
 kind: Pod
 metadata:
+  namespace: meetip
   name: prod-app
   labels:
     app: prod-app
@@ -9,7 +10,7 @@ spec:
   automountServiceAccountToken: false
   containers:
   - name: app-container
-    image: quay.io/rhacs-demo/sample-image:getting-started
+    image: quay.io/ralvares/ubi8:minimal
     ports:
     - containerPort: 8080
     securityContext:
