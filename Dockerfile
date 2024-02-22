@@ -1,2 +1,2 @@
 FROM alpine
-RUN apk xmrig
+RUN apk add xmrig
