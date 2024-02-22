@@ -1,4 +1,4 @@
-FROM registry.access.redhat.com/ubi9/nodejs-20:latest
+FROM registry.access.redhat.com/ubi8/nodejs-20:latest
 
 USER root
 
